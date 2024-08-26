@@ -16,12 +16,12 @@ class MenuState extends FlxState
         super.create();
         add(grpText);
         for (i in 0...controlsString.length) {
-            var text:FlxText = new FlxText(20, 50 + (i * 30), 0, controlsString[i], 20);
+			var text:FlxText = new FlxText(30, 100 + (i * 30), 0, controlsString[i], 20);
             text.ID = i;
             grpText.add(text);
         }
         changeSelection();
-    }    
+	}
 
     override function update(elapsed:Float) {
         super.update(elapsed);
@@ -37,8 +37,9 @@ class MenuState extends FlxState
         if (FlxG.keys.justPressed.ENTER) {
             switch (controlsString[curSelected]) {
                 case "Play":
+					PlatGame.switchState(new SelectStageState());
 				case "Options":
-					FlxG.switchState(new OptionsState());
+					PlatGame.switchState(new OptionsState());
                 case "Quit":
             }
         }

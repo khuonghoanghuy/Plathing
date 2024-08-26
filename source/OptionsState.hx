@@ -41,6 +41,10 @@ class OptionsState extends FlxState
 		{
 			fpsUpdater(10);
 		}
+		if (FlxG.keys.justPressed.ESCAPE)
+		{
+			PlatGame.switchState(new MenuState());
+		}
 	}
 
 	function adjustDataSection()
@@ -51,7 +55,7 @@ class OptionsState extends FlxState
 		fpsBar.createFilledBar(FlxColor.GRAY, FlxColor.WHITE, true, FlxColor.BLACK);
 		add(fpsBar);
 		fpsTxt = new FlxText(0, 0, 0, "FPS: " + SaveData.data.framerate, 28);
-		fpsTxt.setFormat(null, 28, FlxColor.WHITE, CENTER, OUTLINE);
+		fpsTxt.setFormat(null, 28, FlxColor.WHITE, CENTER, OUTLINE, FlxColor.BLACK);
 		fpsTxt.screenCenter();
 		add(fpsTxt);
 	}

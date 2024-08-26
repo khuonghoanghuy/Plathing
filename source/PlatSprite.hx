@@ -8,5 +8,9 @@ class PlatSprite extends FlxSprite
     public function new(x:Float, y:Float, ?path:FlxGraphic) {
         super(x, y, path);
         antialiasing = SaveData.data.antialiasing;
-    }    
+	}
+	override function update(elapsed:Float)
+	{
+		super.update(elapsed);
+	}
 }
