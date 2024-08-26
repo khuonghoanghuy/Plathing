@@ -2,11 +2,10 @@ package;
 
 import flixel.FlxCamera;
 import flixel.FlxG;
-import flixel.FlxState;
 import flixel.text.FlxText;
 import flixel.util.FlxColor;
 
-class SelectStageState extends FlxState
+class SelectStageState extends PlatState
 {
 	var titleText:FlxText;
 	var titleTextBG:PlatSprite;

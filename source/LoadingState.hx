@@ -20,6 +20,8 @@ class LoadingState extends FlxState {
 
     function initThing() {
         SaveData.init();
+		PlatGame.getUpdate(SaveData.data.framerate);
+
         inSection = "Done";
     }
 

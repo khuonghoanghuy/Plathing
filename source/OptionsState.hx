@@ -1,12 +1,11 @@
 package;
 
 import flixel.FlxG;
-import flixel.FlxState;
 import flixel.text.FlxText;
 import flixel.ui.FlxBar;
 import flixel.util.FlxColor;
 
-class OptionsState extends FlxState
+class OptionsState extends PlatState
 {
 	var inSection:String = "Adjust Setting";
 	var inSectionTxt:FlxText = new FlxText(10, FlxG.height - 20, 0, "", 16);
@@ -68,7 +67,7 @@ class OptionsState extends FlxState
 			SaveData.data.framerate += value;
 			fpsBar.value = SaveData.data.framerate;
 		}
-		Framerate.getUpdate(SaveData.data.framerate);
+		PlatGame.getUpdate(SaveData.data.framerate);
 		trace("fps was update into " + value);
 	}
 }

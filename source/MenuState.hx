@@ -1,12 +1,11 @@
 package;
 
 import flixel.FlxG;
-import flixel.FlxState;
 import flixel.group.FlxGroup.FlxTypedGroup;
 import flixel.text.FlxText;
 import flixel.util.FlxColor;
 
-class MenuState extends FlxState
+class MenuState extends PlatState
 {
     var grpText:FlxTypedGroup<FlxText> = new FlxTypedGroup<FlxText>();
 	var controlsString:Array<String> = ["Play", "Options", "Quit"];

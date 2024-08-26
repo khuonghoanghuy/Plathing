@@ -1,8 +1,6 @@
 package;
 
-import flixel.FlxState;
-
-class PlayState extends FlxState
+class PlayState extends PlatState
 {
 	var player:Player = new Player(20, 20);
 

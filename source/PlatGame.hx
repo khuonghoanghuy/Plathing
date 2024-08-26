@@ -5,6 +5,7 @@ import flixel.FlxG;
 import flixel.FlxState;
 import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
+import openfl.Lib;
 
 class PlatGame
 {
@@ -26,4 +27,6 @@ class PlatGame
 
 	public static function addCam(camera:FlxCamera, drawing:Bool = false)
 		return FlxG.cameras.add(camera, drawing);
+	public static function getUpdate(value:Int)
+		return Lib.current.stage.frameRate = value;
 }
