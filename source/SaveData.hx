@@ -5,6 +5,7 @@ import flixel.input.keyboard.FlxKey;
 
 @:structInit class Data {
     public var antialiasing:Bool = false;
+	public var framerate:Int = 60;
 	public var keyMap:Array<FlxKey> = [LEFT, DOWN, UP, RIGHT, A, S, W, D];
 }
 

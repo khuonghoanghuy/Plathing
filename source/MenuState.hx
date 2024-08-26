@@ -9,7 +9,7 @@ import flixel.util.FlxColor;
 class MenuState extends FlxState
 {
     var grpText:FlxTypedGroup<FlxText> = new FlxTypedGroup<FlxText>();
-    var controlsString:Array<String> = PlatUtil.parseArrayAsString(AssetPaths.MenuString__txt);
+	var controlsString:Array<String> = ["Play", "Options", "Quit"];
     var curSelected:Int = 0;
 
     override function create() {
@@ -37,7 +37,8 @@ class MenuState extends FlxState
         if (FlxG.keys.justPressed.ENTER) {
             switch (controlsString[curSelected]) {
                 case "Play":
-                case "Options":
+				case "Options":
+					FlxG.switchState(new OptionsState());
                 case "Quit":
             }
         }
