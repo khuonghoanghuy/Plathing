@@ -58,5 +58,9 @@ class SelectStageState extends PlatState
 		{
 			PlatGame.switchState(new MenuState());
 		}
-    }
+		if (FlxG.keys.justPressed.ENTER)
+		{
+			PlatGame.switchState(new PlayState());
+		}
+	}
 }

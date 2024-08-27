@@ -4,5 +4,5 @@ import flixel.FlxState;
 
 class PlatState extends FlxState
 {
-	var controls:Controls;
+	var controls(default, never):Controls;
 }
