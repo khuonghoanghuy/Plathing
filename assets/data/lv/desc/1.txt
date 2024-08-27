@@ -1,0 +1,5 @@
+{
+    "title": "Our First Level",
+    "desc": "Easy to pass",
+    "diff": 0
+}
