@@ -16,7 +16,7 @@ class Controls
 		"space" => SaveData.data.keyMap[6]
 	];
 
-	public static function is(action:String, ?state:FlxInputState = JUST_PRESSED, ?exact:Bool = false):Bool
+	public function is(action:String, ?state:FlxInputState = JUST_PRESSED, ?exact:Bool = false):Bool
 	{
 		if (!exact)
 		{
@@ -29,7 +29,7 @@ class Controls
 		return (actionMap.exists(action)) ? FlxG.keys.checkStatus(actionMap.get(action), state) : FlxG.keys.checkStatus(FlxKey.fromString(action), state);
 	}
 
-	public static function get(action:String):FlxInputState
+	public function get(action:String):FlxInputState
 	{
 		if (is(action, JUST_PRESSED))
 			return JUST_PRESSED;

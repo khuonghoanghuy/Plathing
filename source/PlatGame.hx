@@ -29,4 +29,9 @@ class PlatGame
 		return FlxG.cameras.add(camera, drawing);
 	public static function getUpdate(value:Int)
 		return Lib.current.stage.frameRate = value;
+	public static function quitGame():Void
+	{
+		SaveData.saveSettings();
+		Sys.exit(0);
+	}
 }

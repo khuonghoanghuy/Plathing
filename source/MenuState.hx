@@ -40,6 +40,7 @@ class MenuState extends PlatState
 				case "Options":
 					PlatGame.switchState(new OptionsState());
                 case "Quit":
+					PlatGame.quitGame();
             }
         }
     }
